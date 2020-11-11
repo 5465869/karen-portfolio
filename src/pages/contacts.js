@@ -1,9 +1,9 @@
 import React from 'react';
-
+import ReactUploadImage from '../components/imageUploader';
 class Contacts extends React.PureComponent {
   render() {
     return (
-      <div>Contact Works!</div>
+      <ReactUploadImage/>
     );
   }
 }
