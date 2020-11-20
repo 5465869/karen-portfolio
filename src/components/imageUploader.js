@@ -2,43 +2,37 @@ import React from 'react'
 const axios = require("axios");
 
 class ReactUploadImage extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state ={
-            file: null
-        };
-        this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.onChange = this.onChange.bind(this);
+    constructor() {
+      super();
+      this.handleSubmit = this.handleSubmit.bind(this);
     }
-    onFormSubmit(e){
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('myImage',this.state.file);
-        const config = {
-            headers: {
-                'content-type': 'multipart/form-data'
-            }
-        };
-        axios.post("http://localhost:3000/upload",formData,config)
-            .then((response) => {
-                alert("The file is successfully uploaded");
-            }).catch((error) => {
-        });
+  
+    handleSubmit(event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      
+      fetch('https://frozen-lowlands-07363.herokuapp.com/upload', {
+        method: 'POST',
+        body: data,
+      });
     }
-    onChange(e) {
-        this.setState({file:e.target.files[0]});
-    }
-
+  
     render() {
-        return (
-            <form onSubmit={this.onFormSubmit}>
-                <h1>File Upload</h1>
-                <input type="file" name="myImage" onChange= {this.onChange} />
-                <button type="submit">Upload</button>
-            </form>
-        )
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="username">Enter username</label>
+          <input id="username" name="photo" accept="image/*" type="file" />
+  
+          <label htmlFor="email">Enter painting size</label>
+          <input id="size" name="size" type="text" />
+  
+          <label htmlFor="birthdate">Enter image title</label>
+          <input id="title" name="title" type="text" />
+  
+          <button>Send data!</button>
+        </form>
+      );
     }
-}
+  }
 
 export default ReactUploadImage

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Jordan from '../jordan.png'
+
 const Country = (props) => {
     return(
       <Card style={{ maxWidth: '18rem', height: '100%', minWidth: '18rem'}}>

@@ -1,12 +1,9 @@
 import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Country from './country';
-import Jordan from '../jordan.png';
-import Lebanon from '../lebanon.png';
-import SaudiArabia from '../saudiarabia.png';
-import Morocco from '../morocco.png';
+import image1 from '../IMG_2633.jpeg';
 import '../styles/navbar.css';
-const array = [Lebanon,SaudiArabia,Morocco,SaudiArabia,Morocco, SaudiArabia,Morocco, SaudiArabia,Morocco, SaudiArabia,Morocco, SaudiArabia,Morocco];
+
 
 const images = array.map(image => {
     return <Country src = {image}/>
