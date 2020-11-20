@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const Country = (props) => {
+const Painting = (props) => {
     return(
       <Card style={{maxWidth:'300px',marginBottom:'.75rem',flexShrink:'3'}}>
         <Card.Img style={{ maxWidth: '300px',height:'auto', display:'inline-block'}} variant="top" src={props.src} />
@@ -16,4 +16,4 @@ const Country = (props) => {
       </Card>);
 }
 
-export default Country;
+export default Painting;

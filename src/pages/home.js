@@ -1,10 +1,10 @@
 import React from 'react';
-import Countries from '../components/countries';
+import Gallery from '../components/gallery';
 class Home extends React.PureComponent {
   render() {
     return (
       <>
-      <Countries/>
+      <Gallery/>
       </>
     )
   }
