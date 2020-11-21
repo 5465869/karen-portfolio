@@ -7,8 +7,8 @@ import Painting from './painting';
 import image1 from '../IMG_2633.jpeg';
 import image2 from '../IMG_2634.jpeg';
 import image3 from '../IMG_2635.jpeg';
-import image4 from '../IMG_2645.jpeg';
-
+import image4 from '../IMG_2662.jpeg';
+import '../styles/gallery.css';
 const array =[image1,image1,image2,image3,image4,image1,image1,image2,image3,image4]
 
 const images = array.map(image => {
@@ -17,21 +17,42 @@ const images = array.map(image => {
 
 const Gallery = () => {
     return(
-   // <div style = {{display:'flex',flexFlow:'column wrap',height:'100rem',maxWidth:'100%'}}>
-     //   {images}
-    //</div>
-    <Container>
-        <Row>
-            <Col>{images[0]}</Col>
-            <Col>{images[1]}</Col>
-            <Col>{images[2]}</Col>
-        </Row>
-        <Row>
-            <Col>{images[0]}</Col>
-            <Col>{images[1]}</Col>
-            <Col>{images[2]}</Col>
-        </Row>
-    </Container>
+        <div class="row">
+  <div class="column">
+    <img src={image4}/>
+    <img src={image1}/>
+    <img src={image4}/>
+    <img src={image1}/>
+    <img src={image3}/>
+    <img src={image2}/>
+    <img src={image1}/>
+  </div>
+  <div class="column">
+    <img src={image4}/>
+    <img src={image3}/>
+    <img src={image2}/>
+    <img src={image3}/>
+    <img src={image1}/>
+    <img src={image1}/>
+  </div>
+  <div class="column">
+    <img src={image3}/>
+    <img src={image4}/>
+    <img src={image1}/>
+    <img src={image1}/>
+    <img src={image2}/>
+    <img src={image1}/>
+    <img src={image3}/>
+  </div>
+  <div class="column">
+    <img src={image2}/>
+    <img src={image4}/>
+    <img src={image3}/>
+    <img src={image1}/>
+    <img src={image2}/>
+    <img src={image2}/>
+  </div>
+</div>
     );
 }
 

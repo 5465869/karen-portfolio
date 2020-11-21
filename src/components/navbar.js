@@ -12,7 +12,7 @@ const styles = {
   justifyContent: 'space-between',
   alignItems: 'center',
   height: '5rem',
-  marginBottom: '2rem'
+ // marginBottom: '2rem'
 
 }
 const liStyle = {
