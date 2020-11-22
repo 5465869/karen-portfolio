@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactUploadImage from '../components/imageUploader';
 import '../styles/heroImage.css';
-import image2 from '..images/IMG_2662.jpeg';
+import image2 from '../images/IMG_2662.jpeg';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
 const Hero = (props) => {
