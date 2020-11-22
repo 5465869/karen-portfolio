@@ -4,7 +4,7 @@ class Home extends React.PureComponent {
   render() {
     return (
       <>
-      <Gallery/>
+      <Gallery />
       </>
     )
   }

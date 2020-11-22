@@ -1,24 +1,17 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import '../styles/gallery.css';
 
-const imgStyle = {
-  display: 'block',
-  width: '100%',
-  height: 'auto'
-}
+
 const Painting = (props) => {
     return(
-      <Card style={{marginBottom:'.75rem',width:'300px'}}>
-        <Card.Img style={imgStyle} variant="top" src={props.src} />
-        <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text>
-          {props.description}
-        </Card.Text>
-        
-      </Card.Body>
-      </Card>);
+      <div class="card">
+        <img src = {props.src}/>
+          <div class = "container">
+            <h4><b>{props.title}</b></h4> 
+            <p>{props.description}</p>
+          </div>
+      </div>
+     );
 }
 
 export default Painting;
