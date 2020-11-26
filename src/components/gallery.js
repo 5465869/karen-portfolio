@@ -39,7 +39,7 @@ import '../styles/gallery.css';
 const array =[image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,image21]
 
 const images = array.map(image => {
-    return <Painting title = 'TITLE' description = 'DESCRIPTION' src = {image}/>
+    return <Painting title = 'Fayetteville landscapes' description = 'Old Maine oil on canvas 5x7' src = {image}/>
 });
 
 const col1 = <Column paintings = {images.slice(0,Math.floor(images.length/3))}/>
