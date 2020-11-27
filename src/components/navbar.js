@@ -11,7 +11,7 @@ const styles = {
   display:'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  height: '5rem',
+  height: '5rem'
  // marginBottom: '2rem'
 
 }
@@ -30,7 +30,7 @@ const NavBar = () => (
       <h1 style = {{marginLeft: '2rem'}}>Karen Spencer</h1>
       <nav>
         <ul style = {{display:'flex',justifyContent:'space-between',marginRight:'2rem'}}>
-          <li style = {liStyle} ><a style = {aStyle} href = 'http://localhost:3000/'>Home</a></li>
+          <li style = {liStyle} ><a style = {aStyle} href = '/'>Home</a></li>
           <li style = {liStyle}>About</li>
           <li style = {liStyle}>Works</li>
         </ul>

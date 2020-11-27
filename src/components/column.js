@@ -5,7 +5,7 @@ import '../styles/gallery.css';
 const Column = (props) => {
     return(
       
-      <div class="column">
+      <div style = {props.style}class="column">
         {props.paintings}
       </div>
      );
