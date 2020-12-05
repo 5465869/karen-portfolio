@@ -1,3 +1,4 @@
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -17,22 +18,22 @@
   }
   
   .column img {
-
     vertical-align: middle;
     width: 100%;    
-    
+    border-radius: 15px 15px 0 0;
   }
   .container {
-    padding: 2px 2px 2px 2px;
+    padding: 10px 2px 2px 2px;
+
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: none !important;
     transition: 0.3s;
     width: 100%;
-    margin-bottom: 10px;
-    
-
-
+    margin-bottom: 20px;
+    border-radius: 15px !important;
+  
   }
   .container h4{
       padding-left: 5px;
@@ -53,12 +54,15 @@
   @media screen and (max-width: 600px) {
    
     .column {
-      flex: 100%;
-      max-width: 100%;
+      max-width: 80%;
+      flex:100%;
+      
+      
 
     }
-  
-    .card{
-        max-width: 75%;
+    .row{
+      justify-content: center;
+      align-items: center;
     }
+  
   }

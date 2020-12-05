@@ -1,32 +1,39 @@
-.navbar {
-  display: flex;
-  justify-content: center;
+.nav-bar{
+  background-color:black;
+  color:white;
+  text-align:center;
+  display:flex;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 4px;
-  background-color: #eceff1;
+  height: 5rem;
+  border-bottom: 1px solid rgba(255,255,255);
 }
 
-.navbar__link {
-  margin: 1em;
-  font-size: 2em;
-  font-family: 'Roboto', sans-serif;
-  cursor: pointer;
+.list{
+  list-style-type: none;
+  padding-left: 1rem;
+
+}
+
+.link{
+  color:white;
+
+  background-color: none;
+}
+.link:hover{
+  padding: 5px 5px 5px 5px;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
   text-decoration: none;
-  letter-spacing: .3em;
-  text-indent: .3em;
-  color: #181818;
-  border-bottom: 3px solid transparent;
 }
+@media screen and (max-width: 600px) {
+  .nav-bar{
+    justify-content: center;
+    font-size: 25px;;
+  }
+  .nav-bar h1{
+    display:none;
+  }
 
-.navbar__link:hover {
-  transform: translateY(-2px);
-}
-
-.navbar__link--active {
-  border-bottom: 3px solid #29b6f6;
-  transition: border-bottom .5s ease-in-out;
-}
-
-.card-deck{
-  justify-content: center;
 }

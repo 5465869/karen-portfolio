@@ -10,7 +10,7 @@ class ReactUploadImage extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       const data = new FormData(event.target);
-      
+     
       fetch('https://frozen-lowlands-07363.herokuapp.com/upload', {
         method: 'POST',
         body: data,
@@ -19,7 +19,7 @@ class ReactUploadImage extends React.Component {
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form  onSubmit={this.handleSubmit}>
           <label htmlFor="username">Enter username</label>
           <input id="username" name="photo" accept="image/*" type="file" />
   
@@ -28,11 +28,11 @@ class ReactUploadImage extends React.Component {
   
           <label htmlFor="birthdate">Enter image title</label>
           <input id="title" name="title" type="text" />
-  
-          <button>Send data!</button>
+          
+          <button >Send data!</button>
         </form>
       );
     }
   }
 
-export default ReactUploadImage
+export default ReactUploadImage;
