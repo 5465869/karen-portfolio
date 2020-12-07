@@ -17,6 +17,7 @@ function Painting(props){
       <div>
         {loaded ? null :
           <div
+            key = {props.id}
             className = 'card'
             style={{
               background: 'grey',
@@ -26,7 +27,7 @@ function Painting(props){
           />
         }
         <Link style={{ textDecoration: 'none', color:'black'}} to={{pathname:`/product/${props.id}`, src : props.src, title:props.title,description:props.description}}>
-          <div id = {props.id} className="card" style = {props.style}>
+          <div key = {props.id} className="card" style = {props.style}>
             <img style={loaded ? {} : {display: 'none'}} src={props.src} onLoad={() => setLoaded(true)}/>
              <div className="container">
               <h5><b>{props.title}</b></h5>
