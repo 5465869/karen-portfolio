@@ -26,11 +26,11 @@ class Gallery extends React.Component {
         
         let paintings = this.state.images.map(image => 
             {
-                return <Painting title = {image.image_title} description = {image.image_size} src = {image.image_path}/>
+                return <Painting key = {image.id.toString()} title = {image.image_title} description = {image.image_size} src = {image.image_path} id = {image.id.toString()}/>
             })
-        column1 = <Column paintings = {paintings.slice(0,Math.floor(paintings.length/3))}/>
-        column2 = <Column paintings = {paintings.slice(Math.floor(paintings.length/3),Math.floor(paintings.length/3) + Math.floor(paintings.length/3))}/>
-        column3 = <Column paintings = {paintings.slice(Math.floor(paintings.length/3) + Math.floor(paintings.length/3),paintings.length)}/>
+        column1 = <Column  key = "1" paintings = {paintings.slice(0,Math.floor(paintings.length/3))}/>
+        column2 = <Column key = "2" paintings = {paintings.slice(Math.floor(paintings.length/3),Math.floor(paintings.length/3) + Math.floor(paintings.length/3))}/>
+        column3 = <Column key = "3" paintings = {paintings.slice(Math.floor(paintings.length/3) + Math.floor(paintings.length/3),paintings.length)}/>
         console.log(column1);
       
         let columns = [column1,column2,column3]
@@ -45,7 +45,7 @@ class Gallery extends React.Component {
         <>
         
     <h1 style = {{color:"white",textAlign:'center',marginTop:'10px',fontSize:'100px'}}>Gallery</h1>
-    <div class="row">
+    <div className="row">
         
         {this.makeColumns()[0]}
         {this.makeColumns()[1]}

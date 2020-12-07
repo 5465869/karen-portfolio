@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactUploadImage from '../components/imageUploader';
 import '../styles/heroImage.css';
-import image2 from '../images/IMG_2662.jpeg';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
 const Hero = (props) => {
   const styles = {
-    backgroundImage: 'url(' + image2 + ')',
+    backgroundImage: "url('https://res.cloudinary.com/hm408jhub/image/upload/v1607142877/rcmjbe9numnpltdjhtzo.jpg')",
     backgroundSize: 'cover',
     justifyContent: 'center',
     textAlign: 'center',

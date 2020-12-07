@@ -4,7 +4,7 @@ import '../styles/gallery.css';
 
 const Column = (props) => {
     return(
-      <div style = {props.style}class="column">
+      <div style = {props.style} className ="column">
         {props.paintings}
       </div>
      );
