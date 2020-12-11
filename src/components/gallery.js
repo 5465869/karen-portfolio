@@ -2,7 +2,8 @@ import React from 'react';
 
 import Painting from './painting';
 import Column from './column'
-
+import Lightbox from "react-awesome-lightbox";
+import "react-awesome-lightbox/build/style.css";
 import '../styles/gallery.css';
 
 class Gallery extends React.Component {
@@ -32,7 +33,7 @@ class Gallery extends React.Component {
         column2 = <Column key = "2" paintings = {paintings.slice(Math.floor(paintings.length/3),Math.floor(paintings.length/3) + Math.floor(paintings.length/3))}/>
         column3 = <Column key = "3" paintings = {paintings.slice(Math.floor(paintings.length/3) + Math.floor(paintings.length/3),paintings.length)}/>
         console.log(column1);
-      
+        
         let columns = [column1,column2,column3]
         return columns;
         
@@ -44,12 +45,13 @@ class Gallery extends React.Component {
     return(
         <>
         
-    <h1 style = {{color:"white",textAlign:'center',marginTop:'10px',fontSize:'100px'}}>Gallery</h1>
+    <h1 style = {{color:"black",textAlign:'center',marginTop:'10px',fontSize:'100px'}}>Gallery</h1>
     <div className="row">
         
         {this.makeColumns()[0]}
         {this.makeColumns()[1]}
         {this.makeColumns()[2]}
+
 
     </div>
  

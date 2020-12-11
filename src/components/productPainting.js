@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React, { useState,useEffect} from 'react';
 import { useMediaQuery } from 'react-responsive'
 import Button from 'react-bootstrap/Button'
-function Painting(props){
+function ProductPainting(props){
   const [loaded, setLoaded] = useState(false)
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 800px)'
@@ -12,7 +12,10 @@ function Painting(props){
   
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 799px)' })
   
-  
+  function handleChange() {
+    // Here, we invoke the callback with the new value
+    props.onChange();
+  } 
 
     return (
       <div>
@@ -29,7 +32,7 @@ function Painting(props){
         }
         <Link style={{ textDecoration: 'none', color:'black'}} to={{pathname: `/product/${props.id}`, src : props.src, title:props.title}}>
           <div key = {props.id} className="card" style = {props.style}>
-            <img style={loaded ? {} : {display: 'none'}} src={props.src} onLoad={() => setLoaded(true)}/>
+            <img onClick = {handleChange} style={loaded ? {} : {display: 'none'}} src={props.src} onLoad={() => setLoaded(true)}/>
              <div className="container">
               <h5><b>{props.title}</b></h5>
               <p>{props.description}</p>
@@ -43,4 +46,4 @@ function Painting(props){
   
 }
 
-export default Painting;
+export default ProductPainting;

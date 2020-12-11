@@ -19,6 +19,7 @@
     
   }
   
+  
   .column img {
     vertical-align: middle;
     width: 100%;    
@@ -26,10 +27,16 @@
   }
   .container {
     padding: 10px 2px 2px 2px;
-
+    background-color: #f5eab5;
+    border-radius: 0 0 15px 15px !important;
+    text-align: center;
+    color: black;
   }
   .info{
-    color: white;
+    color: black;
+  }
+  img:hover {
+    -webkit-filter: brightness(50%);
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -37,7 +44,9 @@
     transition: 0.3s;
     width: 100%;
     margin-bottom: 20px;
+    background-color: grey;
     border-radius: 15px !important;
+    
   
   }
   .container h4{
